@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>白岩瑠姫｜Scene 1</title>
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      background: #fff;
+      color: #333;
+      padding: 1rem;
+      text-align: center;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+    .choice-button {
+      margin: 1rem;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      background-color: #b2ebf2;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .choice-button:hover {
+      background-color: #81d4fa;
+    }
+  </style>
+  <script>
+    function makeChoice(option) {
+      localStorage.setItem("taskCompleted", "true");
+      localStorage.setItem("selectedMember", "ruki");
+      alert("你選擇了：" + option + "\n任務完成，將前往下一站。");
+      window.location.href = "next.html";
+    }
+  </script>
+</head>
+<body>
+  <img src="ruki.jpg" alt="白岩瑠姫 圖像">
+  <h1>白岩瑠姫｜Scene 1</h1>
+  <p>他說：「遞出畫本，就從這裡開始。」</p>
+  <p>請選擇你的行動：</p>
+  <button class="choice-button" onclick="makeChoice('主動接近他')">主動接近他</button>
+  <button class="choice-button" onclick="makeChoice('靜靜觀察他')">靜靜觀察他</button>
+</body>
+</html>
